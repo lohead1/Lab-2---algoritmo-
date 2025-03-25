@@ -16,6 +16,16 @@ public class Golosina {
     public double getPeso(){return this.peso;}
     public void setPeso(double peso){this.peso = peso;}
 
+    //Sobreescritura - ToString
+    public String toString(){
+        return "Golosina{" +
+            "nombre='" + nombre + '\'' +
+            ", peso=" + peso +
+            '}';
+    }
+
+
+
     //SobreEscritura
     @Override
     public boolean equals(Object obj) {

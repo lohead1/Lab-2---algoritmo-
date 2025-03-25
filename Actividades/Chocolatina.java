@@ -11,6 +11,13 @@ public class Chocolatina {
     public String getMarca(){return this.marca;}
     public void setMarca(String marca){this.marca = marca;}
 
+    //Sobreescritura
+    public String toString(){
+        return "Chocolatina{" +
+            "marca='" + this.marca + "'}";
+
+    }
+
     //SobreEscritura
     @Override
     public boolean equals(Object obj) {
