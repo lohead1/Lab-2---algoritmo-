@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public class Cajoneria <E> implements Iterable <E> {
+public class Cajoneria <E> {
     //Atributos
-    private ArrayList <E> lista = new ArrayList <E>();
+    private ArrayList <Caja<E>> listaCajas = new ArrayList<>();
     private int tope; //Reresenta la cantidad maxima de elementos
 
     //Constructor
@@ -11,17 +10,18 @@ public class Cajoneria <E> implements Iterable <E> {
         this.tope = tope;
     }
 
+    //---------------------------------------------------------
     //Metodo Encargado de añadir
-    public void add(E objeto) {
-        if(this.lista.size() <= this.tope) {
-            this.lista.add(objeto);
+    public void add(Caja<E> caja) {
+        if(this.listaCajas.size() <= this.tope) {
+            this.listaCajas.add(caja);
         }else{
             throw new RuntimeException("Limite Alcanzado");
         }
     }
 
-    //Metodo que permite recorrer "Cajoneria"
-    public Iterator <E> iterator() {
-        return this.lista.iterator();
+    @Override
+    public String toString(){
+        return "";
     }
 }
