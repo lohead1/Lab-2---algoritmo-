@@ -15,4 +15,22 @@ public class Golosina {
 
     public double getPeso(){return this.peso;}
     public void setPeso(double peso){this.peso = peso;}
+
+    //SobreEscritura
+    @Override
+    public boolean equals(Object obj) {
+        
+        if(this == obj) return true;
+
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+            
+        Golosina gol = (Golosina) obj;
+
+        return this.nombre.equals(gol.getNombre()) && this.peso == gol.getPeso();
+    }
+
+    //Override -> HashCode -> Usar ED basadas en hash
+
 }

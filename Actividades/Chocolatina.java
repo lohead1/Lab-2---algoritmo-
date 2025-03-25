@@ -10,4 +10,22 @@ public class Chocolatina {
     //Setters y Getters
     public String getMarca(){return this.marca;}
     public void setMarca(String marca){this.marca = marca;}
+
+    //SobreEscritura
+    @Override
+    public boolean equals(Object obj) {
+        
+        if(this == obj) return true;
+
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+            
+        Chocolatina cho = (Chocolatina) obj;
+
+        return this.marca.equals(cho.getMarca());
+    }
+
+    //Override -> HashCode -> Usar ED basadas en hash
+
 }
