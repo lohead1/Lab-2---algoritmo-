@@ -14,6 +14,22 @@ public class Principal{
         return true; //Contenido igual
     }
 
+    //Ejercicios
+    //---------------------------------Ejercicio N°1
+    public static <E> boolean exist(E[] arr, E element){
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i].equals(element)){
+                
+                //Si se encuentra el elemento retorna true
+                return true;
+            }
+        }
+
+        //Si no se encuentra retorna false
+        return false;
+    }
+
+
     public static void main(String[] args) {
 
         //test de uso clase Bolsa - Actividad 4
@@ -51,7 +67,7 @@ public class Principal{
             System.out.println("nums es igual a nums4");
         
         // Crea un array de double - Actividad 6
-        Double dvals[]={1.1,2.2,3.3,4.4,5.5};
+        //Double dvals[]={1.1,2.2,3.3,4.4,5.5};
         
         /* 
         if(igualArrays(nums,dvals))
@@ -72,5 +88,14 @@ public class Principal{
         for(Golosina golosina : bg){
             System.out.println(golosina.getNombre());
         }
+
+        //Prueba ejercicio N°1
+        //----------------------------------------------------------------
+        String[] arr1 = {"Perez", "Sanchez", "Rodriguez"};
+        Integer[] arr2 = {1,14,53};
+
+        System.out.println("Sanchez esta en arr1: " + exist(arr1, "Sanchez")); //True
+        System.out.println("34 esta en arr2: " + exist(arr2, 34)); //True
+        System.out.println("Salas esta en arr1: " + exist(arr1, "Salas")); //false
     }
 }
