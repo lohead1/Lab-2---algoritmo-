@@ -73,7 +73,7 @@ public class Cajoneria <E> {
 
     for (int i = 0; i < listaCajas.size(); i++) {
         Caja<E> caja = listaCajas.get(i);
-        sb.append((i + 1))  // Posición (1-based index)
+        sb.append((i + 1))
             .append("\t")
             .append(caja.getColor() != null ? caja.getColor() : "Sin color")
             .append("\t")
