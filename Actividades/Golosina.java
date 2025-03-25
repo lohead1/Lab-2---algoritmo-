@@ -24,23 +24,24 @@ public class Golosina {
             '}';
     }
 
-
-
     //SobreEscritura
     @Override
     public boolean equals(Object obj) {
         
+        //Verifica si son iguales por referencia
         if(this == obj) return true;
 
+        //Valida que no sea nulo ademas de ser de la misma clase
         if(obj == null || this.getClass() != obj.getClass()){
             return false;
         }
             
+        //Cast a Golosina
         Golosina gol = (Golosina) obj;
 
+        //Comparacion
         return this.nombre.equals(gol.getNombre()) && this.peso == gol.getPeso();
     }
 
     //Override -> HashCode -> Usar ED basadas en hash
-
 }

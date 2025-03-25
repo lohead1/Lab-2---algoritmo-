@@ -34,7 +34,6 @@ public class Principal{
         for (T elemento : arr) {
             System.out.println(elemento.toString());
         }
-        
     }
 
 
@@ -43,14 +42,17 @@ public class Principal{
         //test de uso clase Bolsa - Actividad 4
         Bolsa <Chocolatina> bc = new Bolsa<>(3);
 
+        //Crear Chocolatinas
         Chocolatina c = new Chocolatina("milka");
         Chocolatina c1 = new Chocolatina("milka");
         Chocolatina c2 = new Chocolatina("ferrero");
 
+        //Agregar Chocolatinas
         bc.add(c);
         bc.add(c1);
         bc.add(c2);
 
+        //Mostrar Chocolatinas
         for (Chocolatina chocolatina: bc) {
             System.out.println(chocolatina.getMarca());
         }
@@ -83,16 +85,20 @@ public class Principal{
         */
 
         //Bolsa Golosinas - Actividad 7
+        //Crear Bolsa de Golosinas
         Bolsa<Golosina> bg = new Bolsa<>(3);
 
+        //Crear Golosinas
         Golosina g1 = new Golosina("Golosina1", 1.20);
         Golosina g2 = new Golosina("Golosina2", 2.20);
         Golosina g3 = new Golosina("Golosina3", 3.20);
 
+        //Agrergar Golosinas a la bolsa
         bg.add(g1);
         bg.add(g2);
         bg.add(g3);
 
+        //Mostrar Golosinas
         for(Golosina golosina : bg){
             System.out.println(golosina.getNombre());
         }

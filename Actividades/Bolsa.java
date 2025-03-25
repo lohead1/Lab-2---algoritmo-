@@ -14,7 +14,7 @@ public class Bolsa <E> implements Iterable <E> {
 
     //Metodo Encargado de añadir a la bolsa
     public void add(E objeto) {
-        if(this.lista.size() <= this.tope) {
+        if(this.lista.size() < this.tope) {
             this.lista.add(objeto);
         }else{
             throw new RuntimeException("Limite Alcanzado");

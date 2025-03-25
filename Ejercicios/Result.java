@@ -18,6 +18,4 @@ public class Result {
     public String toString(){
         return "[" + this.color + ", " + this.indice + "]";
     }
-
-
 }

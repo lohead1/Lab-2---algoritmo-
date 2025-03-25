@@ -65,8 +65,22 @@ public class Cajoneria <E> {
         return null;
     }
 
+    //Implementacion toString
     @Override
     public String toString(){
-        return "";
+        StringBuilder sb = new StringBuilder();
+    sb.append("Posicion\tColor Caja\tObjeto\n");
+
+    for (int i = 0; i < listaCajas.size(); i++) {
+        Caja<E> caja = listaCajas.get(i);
+        sb.append((i + 1))  // Posición (1-based index)
+            .append("\t")
+            .append(caja.getColor() != null ? caja.getColor() : "Sin color")
+            .append("\t")
+            .append(caja.getContenido() != null ? caja.getContenido().toString() : "Vacío")
+            .append("\n");
+    }
+
+    return sb.toString();
     }
 }

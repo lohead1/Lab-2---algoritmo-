@@ -22,17 +22,20 @@ public class Chocolatina {
     @Override
     public boolean equals(Object obj) {
         
+        //Compara referencia
         if(this == obj) return true;
 
+        //Verifica que no se nulo y sean de la misma clase
         if(obj == null || this.getClass() != obj.getClass()){
             return false;
         }
             
+        //cast a Chocolatina (Object -> Chocolatina)
         Chocolatina cho = (Chocolatina) obj;
 
+        //Compara atributos
         return this.marca.equals(cho.getMarca());
     }
 
     //Override -> HashCode -> Usar ED basadas en hash
-
 }
