@@ -1,10 +1,10 @@
-public class Caja <E> {
+public class Caja <T> {
     //Atributos
     private String color;
-    private E contenido;
+    private T contenido;
 
     //Constructor
-    public Caja(String color, E contenido){
+    public Caja(String color, T contenido){
         this.color = color;
         this.contenido = contenido;
     }
@@ -19,6 +19,6 @@ public class Caja <E> {
     public String getColor(){return this.color;}
     public void setColor(String color){this.color = color;}
 
-    public E getContenido(){return this.contenido;}
-    public void setContenido(E contenido){this.contenido = contenido;}
+    public T getContenido(){return this.contenido;}
+    public void setContenido(T contenido){this.contenido = contenido;}
 }

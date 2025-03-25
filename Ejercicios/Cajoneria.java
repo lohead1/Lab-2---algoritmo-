@@ -20,6 +20,25 @@ public class Cajoneria <E> {
         }
     }
 
+    public Result search(E element){
+
+        int index = 0;
+
+        for (Caja<E> caja : this.listaCajas){
+            if(caja.getContenido().equals(element)){
+                
+                /*Retorna objeto Result si encuentra el
+                elemento en alguna de las cajas
+                */
+                return new Result(caja.getColor(),index);
+            }
+            index++;
+        }
+
+        //Retorna null si no lo encuentra
+        return null;
+    }
+
     @Override
     public String toString(){
         return "";
