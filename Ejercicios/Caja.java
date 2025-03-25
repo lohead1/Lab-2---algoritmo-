@@ -9,6 +9,12 @@ public class Caja <E> {
         this.contenido = contenido;
     }
 
+    //Constructor por defecto
+    public Caja(){
+        this.color = "Blanco";
+        this.contenido = null;
+    }
+
     //Setters y getters
     public String getColor(){return this.color;}
     public void setColor(String color){this.color = color;}
