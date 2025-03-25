@@ -32,5 +32,34 @@ public class TestGen {
         // Mostrar la Cajoneria después de eliminar
         System.out.println("\nEstado final de la Cajoneria:");
         System.out.println(cajoneria);
+
+        //---------------------------
+        //Ejercicio N°6
+        //Cajoneria Chocolatina
+        Cajoneria<Chocolatina> cajCho = new Cajoneria<>(5);
+
+        // Agregar chocolatinas
+        cajCho.add(new Caja<>("Rojo", new Chocolatina("Milka")));
+        cajCho.add(new Caja<>("Azul", new Chocolatina("Nestlé")));
+        cajCho.add(new Caja<>("Verde", new Chocolatina("Ferrero")));
+        cajCho.add(new Caja<>("Amarillo", new Chocolatina("Lindt")));
+        cajCho.add(new Caja<>("Blanco", new Chocolatina("Toblerone")));
+
+        // Ver la cajoneria
+        System.out.println("\nEstado inicial de la cajoneria:");
+        System.out.println(cajCho);
+
+        // Buscar una chocolatina
+        Chocolatina search = new Chocolatina("Nestlé");
+        System.out.println("\nResultado de la búsqueda: " + cajCho.search(search));
+
+        // Eliminar una chocolatina
+        Chocolatina elimin = cajCho.delete(new Chocolatina("Ferrero"));
+        System.out.println("Eliminada: " + elimin);
+
+        // Ver la cajoneria después de eliminar
+        System.out.println("\nEstado de la cajoneria después de eliminar:");
+        System.out.println(cajCho);
+
     }
 }
