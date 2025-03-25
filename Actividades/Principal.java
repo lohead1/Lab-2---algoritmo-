@@ -29,6 +29,14 @@ public class Principal{
         return false;
     }
 
+    //---------------------------------Ejercicio N°2
+    public static <T extends Iterable<T>> void print(T[] arr){
+        for (T elemento : arr) {
+            System.out.println(elemento.toString());
+        }
+        
+    }
+
 
     public static void main(String[] args) {
 
