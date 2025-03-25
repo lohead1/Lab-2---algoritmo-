@@ -13,7 +13,7 @@ public class Cajoneria <E> {
     //---------------------------------------------------------
     //Metodo Encargado de añadir
     public void add(Caja<E> caja) {
-        if(this.listaCajas.size() <= this.tope) {
+        if(this.listaCajas.size() < this.tope) {
             this.listaCajas.add(caja);
         }else{
             throw new RuntimeException("Limite Alcanzado");
@@ -36,6 +36,32 @@ public class Cajoneria <E> {
         }
 
         //Retorna null si no lo encuentra
+        return null;
+    }
+
+    public E delete(E element){
+
+        //Busca el elemento para verificar si existe o no
+        Result res = this.search(element);
+
+        if(res != null){
+            //Si es diferente a null el elemento se encuentra en Cajoneria
+
+            //Guarda el objeto de la caja
+            E obj = this.listaCajas.get(res.getIndice()).getContenido();
+
+            this.listaCajas.get(res.getIndice()).setContenido(null);
+
+            /*
+             * "Elimina" el contenido de la caja estableciendo los valores como 
+             * null
+             */
+
+            return obj;
+
+        }
+
+        //Retorna null si no se encontro el elemento
         return null;
     }
 
