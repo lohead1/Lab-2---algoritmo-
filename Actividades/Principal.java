@@ -30,8 +30,8 @@ public class Principal{
     }
 
     //---------------------------------Ejercicio N°2
-    public static <T extends Iterable<T>> void print(T[] arr){
-        for (T elemento : arr) {
+    public static <T extends Iterable<?>> void print(T arr){
+        for (Object elemento : arr) {
             System.out.println(elemento.toString());
         }
     }
@@ -102,6 +102,9 @@ public class Principal{
         for(Golosina golosina : bg){
             System.out.println(golosina.getNombre());
         }
+
+        //Uso  de metodo Generico para imprimir
+        print(bg);
 
         //Prueba ejercicio N°1
         //----------------------------------------------------------------
